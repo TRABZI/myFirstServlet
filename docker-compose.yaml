@@ -3,6 +3,7 @@ version: '3'
 services:
   tomcat:
     build: .
+    image: tomcat
     ports:
       - 9090:8080
     networks:
@@ -11,6 +12,7 @@ services:
 
   httpd:
     build: ./httpd
+    image: httpd
     ports:
       - 8880:80
     networks:
