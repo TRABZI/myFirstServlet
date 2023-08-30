@@ -9,7 +9,7 @@ COPY ./server.xml ./conf/
 
 RUN apt-get update
 RUN apt-get install zip -y 
-RUN unzip myFirstServlet.war
+RUN unzip myFirstServlet.war -d myFirstServlet
 RUN ls -ltra
 RUN cp -r ./myFirstServlet ./webapps
 RUN rm -r ./myFirstServlet && rm ./myFirstServlet.war
