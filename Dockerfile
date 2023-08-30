@@ -4,7 +4,7 @@ FROM tomcat:${tomcat_image_version}
 
 WORKDIR /usr/local/tomcat 
 
-COPY ./myFirstServlet.war .
+COPY ./target/myFirstServlet.war .
 COPY ./server.xml ./conf/
 
 RUN apt-get update
