@@ -1,0 +1,11 @@
+---
+- name: playbook to deploy java application into tomcat server
+  hosts: PPN
+  become: true
+  become_user: tomcat
+
+  tasks:
+  - name: copy war file to PPN servers
+    copy:
+      src: /home/ubuntu/java_projects/myFirstServlet/target/myFirstServlet.war
+      dest: /opt/tomcat/
